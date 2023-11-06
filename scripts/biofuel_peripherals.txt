@@ -1,0 +1,79 @@
+Monitor = monitor_5
+
+Farm Power FireBox = solid_fueled_boiler_firebox_0
+Liquid FireBox = liquid_fueled_boiler_firebox_1
+
+Ethanol Tank = rcirontankvalvetile_0
+Biofuel Tank = rcirontankvalvetile_1
+Juice Tank = rcirontankvalvetile_2
+Sludge Tank = rcirontankvalvetile_3
+
+Energy Cell = tile_thermalexpansion_cell_reinforced_name_0
+
+Fermenter 1 = factory_3_name_3
+Fermenter 2 = factory_3_name_4
+
+Squeezer = factory_5_name_0
+
+Still 1 = factory_4_name_3
+Still 2 = factory_5_name_4
+Still 3 = factory_6_name_5
+
+Screen Sizes ---
+
+Scale 0.5 = 57x52
+Scale 1.0 = 29x26
+Scale 1.5 = 19x17
+Scale 2.0 = 14x13
+
+Tank API Reference ---
+    tank.getTankInfo()
+
+    {
+        {
+            capacity = 3200000
+            contents = {
+                rawName = "Sludge"
+                amount = 937210
+                name = "sludge"
+                id = 150
+            },
+        },
+    }
+
+Energy Cell API Reference ---
+    encell.getMaxEnergyStored()
+
+    20000000
+
+    encell.getEnergyStored()
+
+    19999999
+
+Firebox API Reference ---
+    firebox.getTemperature()
+    
+    129
+
+    firebox.isBurning()
+
+    true
+
+Event Programming in ComputerCraft
+
+local event, x, y = os.pullEvent()
+--grab any event from the event queue
+
+local event, x, y = os.pullEvent("timer")
+--only grab events of type "timer"
+
+os.startTimer(1)
+--queue timer event after 1 second
+
+os.startTimer(0)
+--queue timer event after at least 1 tick
+
+local timerObj = os.startTimer(5)
+local event, timerID = os.pullEvent("timer")
+--start timer for 5 seconds then wait
+--timerObj == timerID = true
