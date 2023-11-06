@@ -1,8 +1,3 @@
---What the fuck did you just fucking say
---about me you little bitch? I'll have you
---know I graduated the top of my class in
---that navy seals...
-
 --defining constants in hash table
 hardCoded = {}
 
